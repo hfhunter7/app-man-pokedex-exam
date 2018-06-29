@@ -30,6 +30,7 @@ class App extends Component {
 		this.state = {
 			items: [],
 			pokedex: [],
+			originalItems: [],
 			mode: 'dex'
 		}
 	}
@@ -39,6 +40,7 @@ class App extends Component {
 		).then((json) => {
 				this.setState({
 					items: json.cards,
+					originalItems: json.cards
 				})
 			}
 		);
@@ -70,10 +72,17 @@ class App extends Component {
 
 	handleSearch = (text) => {
 		const data = this.state.items.filter((item) => item.name.indexOf(text) !== -1)
+		
+		if(text === ''){
+			this.setState({
+				items: this.state.originalItems
+			})
+		}else{
+			this.setState({
+				items: data
+			})
+		}
 
-		this.setState({
-			items: data
-		})
 	}
 
 	render() {
