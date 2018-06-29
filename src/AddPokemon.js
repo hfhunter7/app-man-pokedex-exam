@@ -70,9 +70,9 @@ class AddPokemon extends Component {
 									<p>{data.name}</p>
 									<div><p>hp</p> <LineProgress percent={data.hp > 100 ? 100 : data.hp} strokeWidth="1" strokeColor="#f0932b"/>
 									</div>
-									<div><p>str</p> <LineProgress percent={(data.hp * 100) / 200} strokeWidth="1" strokeColor="#f0932b"/>
+									<div><p>str</p>
 									</div>
-									<div><p>weak</p> <LineProgress percent={(data.hp * 100) / 200} strokeWidth="1" strokeColor="#f0932b"/>
+									<div><p>weak</p>
 									</div>
 									<p>star</p>
 									<TextAdd onClick={(e) => this.handleAddPokemon(e , data)}>add</TextAdd>
