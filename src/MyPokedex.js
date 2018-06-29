@@ -75,8 +75,7 @@ class MyPokedex extends Component {
 									</DivImage>
 									<DivData>
 										<p>{data.name}</p>
-										<div><p>hp</p> <LineProgress percent={"60"} strokeWidth="10"
-										                             strokeColor="#D3D3D3"/>
+										<div><p>hp</p> <LineProgress percent={data.hp > 100 ? 100 : data.hp} strokeWidth="1" strokeColor="#f0932b"/>
 										</div>
 										<p>str</p>
 										<p>weak</p>
