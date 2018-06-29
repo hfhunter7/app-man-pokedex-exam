@@ -29,7 +29,7 @@ class App extends Component {
 		this.state = {
 			items: [],
 			pokedex: [],
-			mode: 'add'
+			mode: 'dex'
 		}
 	}
 
