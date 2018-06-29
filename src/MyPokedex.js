@@ -34,6 +34,7 @@ const MainContainer = styled.div`
     justify-content: space-between;
     height: 690px;
     padding-top: 45px;
+    overflow-y: scroll;
 `;
 
 const TextAdd = styled.p`

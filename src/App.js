@@ -20,6 +20,7 @@ import AddPokemon from './AddPokemon';
 
 const Main = styled.div`
 	height: 768px;
+	
 `;
 
 class App extends Component {
